@@ -3,7 +3,7 @@ const Tutorial = db.tutorials;
 
 // Create and Save a new Tutorial
 exports.create = (req, res) => {
-  
+  if (!req.body.title){res.status(400).send({massage:"content can not be empty"});}
 };
 
 // Retrieve all Tutorials from the database.
